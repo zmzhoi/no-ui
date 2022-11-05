@@ -5,11 +5,12 @@
   "description": "UI components for react with no dependency.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "dev": "npm start -w zmzhoi-cra",
+    "test:all": "jest --watch",
     "build:all": "npm run build --workspaces"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["UI components", "UI library", "UI framework", "React UI"],
+  "author": "zmzhoi",
   "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -24,6 +25,7 @@
     "typescript": "^4.8.4"
   },
   "workspaces": [
-    "packages/portal"
+    "packages/*",
+    "examples/*"
   ]
 }
