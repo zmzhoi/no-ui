@@ -1,12 +1,9 @@
-import Layout from '@/components/Layout';
-
-import pkg from '../package.json';
+// import PortalExample from './components/PortalExample';
+import TooltipExample from './components/TooltipExample';
 
 function App() {
-  /**
-   * Remove code below
-   */
-  return <Layout>{`<${pkg.name} />`}</Layout>;
+  // return <PortalExample />;
+  return <TooltipExample />;
 }
 
 export default App;

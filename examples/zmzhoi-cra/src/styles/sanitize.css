@@ -1,1 +1,31 @@
 @import-sanitize;
+
+
+/* .TooltipExample */
+.TooltipExample {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.TooltipExample > div + div {
+  margin-left: 3rem;
+}
+.TooltipExample ul {
+  margin: 0;
+  padding: 0;
+  border: 1px solid gray;
+  width: 150px;
+  height: 500px;
+  overflow: auto;
+}
+.TooltipExample li {
+  list-style: none;
+  transition: .15s background ease-out;
+  cursor: pointer;
+  background: rgba(245, 245, 245, 0.7);
+}
+.TooltipExample li:hover {
+  background: rgba(0,0,0,0.3);
+}

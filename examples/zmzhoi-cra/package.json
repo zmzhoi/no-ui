@@ -11,6 +11,8 @@
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx && tsc --noEmit"
   },
   "dependencies": {
+    "@no-ui/portal": "^0.0.1-alpha.1",
+    "@no-ui/tooltip": "^0.0.1-alpha.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

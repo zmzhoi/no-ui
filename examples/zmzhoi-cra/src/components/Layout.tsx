@@ -1,10 +1,11 @@
 import { CSSProperties } from 'react';
 
 interface Props {
+  customStyle?: React.CSSProperties;
   children: React.ReactNode;
 }
 
-function Layout({ children }: Props) {
+function Layout({ customStyle = {}, children }: Props) {
   const style: CSSProperties = {
     width: '100vw',
     height: '100vh',
@@ -16,10 +17,9 @@ function Layout({ children }: Props) {
     backgroundColor: '#2d2d2d',
     color: 'white',
     fontWeight: 100,
-    fontSize: '3rem',
   };
 
-  return <div style={style}>{children}</div>;
+  return <div style={Object.assign({}, style, customStyle)}>{children}</div>;
 }
 
 export default Layout;

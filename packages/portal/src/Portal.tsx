@@ -1,13 +1,12 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
 
-export interface PortalProps {
+export interface PortalProps extends PropsWithChildren {
   visible: boolean;
   container?: Element | DocumentFragment;
-  children: ReactNode;
 }
 
-export function Portal({ visible, children, container = undefined }: PortalProps) {
+export function Portal({ visible, container = undefined, children }: PortalProps) {
   if (!visible) {
     return null;
   }
