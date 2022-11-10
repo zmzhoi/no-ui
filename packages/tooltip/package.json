@@ -4,16 +4,9 @@
   "description": "",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
+  "sideEffects": false,
   "types": "dist/types",
-  "scripts": {
-    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
-    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\"",
-    "lint": "eslint src --ext .ts,.tsx",
-    "prebuild": "npm run format && npm run lint",
-    "build": "tsc && rollup -c",
-    "test": "jest"
-  },
-  "author": "zmzhoi",
+  "author": "zmzhoi <zmzhoi@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/zmzhoi/no-ui#readme",
   "repository": {
@@ -23,13 +16,21 @@
   "bugs": {
     "url": "https://github.com/zmzhoi/no-ui/issues"
   },
-  "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "scripts": {
+    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
+    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\"",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prebuild": "npm run format && npm run lint",
+    "build": "tsc && rollup -c",
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "^17 | ^18",
     "react-dom": "^17 | ^18"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@no-ui/portal": "^0.0.1-alpha.1"

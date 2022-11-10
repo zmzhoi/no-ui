@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "npm start -w zmzhoi-cra",
     "test:all": "jest --watch",
-    "build:all": "npm run build --workspace packages/**"
+    "build:all": "npm run build --workspace packages/**",
+    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
+    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\""
   },
   "keywords": [
     "UI components",
