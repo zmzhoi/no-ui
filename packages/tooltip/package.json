@@ -1,7 +1,7 @@
 {
   "name": "@no-ui/tooltip",
   "version": "0.0.1-alpha.1",
-  "description": "",
+  "description": "@no-ui/tooltip is a tooltip component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
   "sideEffects": false,
@@ -17,8 +17,8 @@
     "url": "https://github.com/zmzhoi/no-ui/issues"
   },
   "scripts": {
-    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
-    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\"",
+    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
+    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
     "lint": "eslint src --ext .ts,.tsx",
     "prebuild": "npm run format && npm run lint",
     "build": "tsc && rollup -c",
@@ -29,10 +29,7 @@
     "react-dom": "^17 | ^18"
   },
   "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "dependencies": {
-    "@no-ui/portal": "^0.0.1-alpha.1"
+    "react": "^18",
+    "react-dom": "^18"
   }
 }

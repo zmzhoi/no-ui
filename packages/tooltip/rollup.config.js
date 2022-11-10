@@ -1,11 +1,15 @@
+const path = require('path');
+
 const peerDepsExternal = require('rollup-plugin-peer-deps-external');
 const eslint = require('@rollup/plugin-eslint');
 const { babel } = require('@rollup/plugin-babel');
 const commonjs = require('@rollup/plugin-commonjs');
+const replace = require('@rollup/plugin-replace');
 
 const pkg = require('./package.json');
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const babelConfigPath = path.resolve(__dirname, '..', '..', 'babel.config.js');
 
 const config = {
   input: './src/index.ts',
@@ -29,14 +33,15 @@ const config = {
     babel({
       extensions,
       babelHelpers: 'bundled',
+      configFile: babelConfigPath,
     }),
     commonjs({
       extensions,
     }),
-    // replace({
-    //   __BUILD_VERSION__: JSON.stringify(pkg.version),
-    //   preventAssignment: true, // this option will be default on next version.
-    // }),
+    replace({
+      __VERSION__: JSON.stringify(pkg.version),
+      preventAssignment: true,
+    }),
     peerDepsExternal(),
   ],
   external: ['@no-ui/portal'],

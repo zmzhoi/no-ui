@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm start -w zmzhoi-cra",
+    "plop": "plop",
     "test:all": "jest --watch",
     "build:all": "npm run build --workspace packages/**",
     "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
@@ -24,6 +25,7 @@
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-eslint": "^9.0.1",
+    "@rollup/plugin-replace": "^5.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.1",
@@ -34,6 +36,7 @@
     "eslint": "^8.26.0",
     "jest": "^29.2.2",
     "jest-environment-jsdom": "^29.2.2",
+    "plop": "^3.1.1",
     "prettier": "^2.7.1",
     "rollup": "^3.2.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",

@@ -190,8 +190,6 @@ export function Tooltip({
 }
 
 const defaultTooltipStyle: CSSProperties = {
-  // width: 'auto',
-  // maxWidth: '200px',
   background: 'rgba(0,0,0,0.85)',
   color: 'white',
   fontSize: '0.9rem',
@@ -202,4 +200,4 @@ const defaultTooltipStyle: CSSProperties = {
   wordBreak: 'break-all',
 };
 
-// Tooltip.version = __BUILD_VERSION__;
+Tooltip.version = __VERSION__;

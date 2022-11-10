@@ -15,3 +15,5 @@ export function Portal({ visible, container = undefined, children }: PortalProps
 
   return createPortal(children, _container);
 }
+
+Portal.version = __VERSION__;
