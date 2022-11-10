@@ -1,7 +1,7 @@
 {
-  "name": "@no-ui/tooltip",
+  "name": "@no-ui/utils",
   "version": "0.0.1-alpha.1",
-  "description": "@no-ui/tooltip is a tooltip component for react.",
+  "description": "@no-ui/utils is utility package for no-ui.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
   "sideEffects": false,
@@ -31,9 +31,5 @@
   "devDependencies": {
     "react": "^18",
     "react-dom": "^18"
-  },
-  "dependencies": {
-    "@no-ui/portal": "^0.0.1-alpha.1",
-    "@no-ui/utils": "^0.0.1-alpha.1"
   }
 }

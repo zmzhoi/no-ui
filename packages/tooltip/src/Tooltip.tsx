@@ -1,15 +1,20 @@
 import { useEffect, useRef, useState, useReducer, cloneElement, CSSProperties } from 'react';
 import { Portal } from '@no-ui/portal';
+import { debounce } from '@no-ui/utils';
 
 import Arrow from './Arrow';
-import { getBackgroundColor, TOOLTIP_ZINDEX, debounce } from './utils';
 
 export interface TooltipProps {
   message: string | number;
   fire?: 'always' | 'ellipsis' | 'click';
   extraStyle?: CSSProperties;
   arrow?: boolean;
+  zIndex?: number;
   children: JSX.Element;
+}
+
+export function getBackgroundColor(style: CSSProperties): string {
+  return (style.backgroundColor as string) || (style.background as string) || 'white';
 }
 
 export function Tooltip({
@@ -17,6 +22,7 @@ export function Tooltip({
   fire = 'always',
   extraStyle = undefined,
   arrow = true,
+  zIndex = 10000,
   children,
 }: TooltipProps) {
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -175,7 +181,7 @@ export function Tooltip({
         <div
           style={{
             position: 'fixed',
-            zIndex: TOOLTIP_ZINDEX,
+            zIndex,
             ...style,
           }}
         >
