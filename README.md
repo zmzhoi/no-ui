@@ -6,15 +6,17 @@
 - **Simple and Easy to use.**
 
 ## Installation
-
-If you want every packages, install core pakcage:
-
 ```
 npm install @no-ui/core
 ```
 
-If you want only one package, install that(e.g. tooltip):
-
+You can also install only what you want:
 ```
 npm install @no-ui/tooltip
 ```
+
+
+## Components
+
+- [Portal](packages/portal/README.md)
+- [Tooltip](packages/tooltip/README.md)
