@@ -6,15 +6,16 @@
 - **Simple and Easy to use.**
 
 ## Installation
+
 ```
 npm install @no-ui/core
 ```
 
 You can also install only what you want:
+
 ```
 npm install @no-ui/tooltip
 ```
-
 
 ## Components
 
