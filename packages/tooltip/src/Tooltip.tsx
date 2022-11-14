@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useReducer, cloneElement, CSSProperties } from 'react';
 import { Portal } from '@no-ui/portal';
-import { debounce } from '@no-ui/utils';
+import { debounce, setSignature } from '@no-ui/utils';
 
 import Arrow from './Arrow';
 
@@ -206,4 +206,4 @@ const defaultTooltipStyle: CSSProperties = {
   wordBreak: 'break-all',
 };
 
-Tooltip.version = __VERSION__;
+setSignature(Tooltip, __VERSION__);

@@ -1,3 +1,4 @@
+import { setSignature } from '@no-ui/utils';
 import { PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -16,4 +17,4 @@ export function Portal({ visible, container = undefined, children }: PortalProps
   return createPortal(children, _container);
 }
 
-Portal.version = __VERSION__;
+setSignature(Portal, __VERSION__);

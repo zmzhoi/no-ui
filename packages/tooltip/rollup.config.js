@@ -44,7 +44,7 @@ const config = {
     }),
     peerDepsExternal(),
   ],
-  external: ['@no-ui/portal', '@no-ui/utils'],
+  external: [/@no-ui/],
 };
 
 module.exports = config;
