@@ -69,7 +69,6 @@ export function Tooltip({
         }
 
         const { top, left, width } = childrenRefCurrent.getBoundingClientRect();
-        console.log(childrenRefCurrent.getBoundingClientRect());
         setStyle((previousStyle) =>
           previousStyle
             ? null
