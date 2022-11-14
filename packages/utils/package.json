@@ -22,6 +22,7 @@
     "lint": "eslint src --ext .ts,.tsx",
     "prebuild": "npm run format && npm run lint",
     "build": "tsc && rollup -c",
+    "dev": "rollup -cw",
     "test": "jest"
   },
   "peerDependencies": {
