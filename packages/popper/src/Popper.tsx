@@ -68,6 +68,7 @@ export function Popper({
     onToggle();
   };
 
+  // Close popper on scroll and resize
   useWindowEvent({ type: 'scroll', callback: onClose, disabled: !show });
   useWindowEvent({ type: 'resize', callback: onClose, disabled: !show });
 

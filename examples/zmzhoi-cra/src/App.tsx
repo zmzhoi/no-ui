@@ -1,11 +1,11 @@
-// import PortalExample from './components/PortalExample';
-// import TooltipExample from './components/TooltipExample';
-import PopperExample from './components/PopperExample';
+// import Portal from './components/Portal';
+// import Tooltip from './components/Tooltip';
+import Popper from './components/Popper';
 
 function App() {
-  // return <PortalExample />;
-  // return <TooltipExample />;
-  return <PopperExample />;
+  // return <Portal />;
+  // return <Tooltip />;
+  return <Popper />;
 }
 
 export default App;

@@ -24,7 +24,7 @@ function PopperExample() {
             <div className="inner" key={index}>
               <Popper
                 position={position}
-                margin={20}
+                // margin={10}
                 // bubble
                 // showOnMount
                 // disableOutsideClick
