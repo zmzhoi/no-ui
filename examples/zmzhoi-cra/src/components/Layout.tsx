@@ -16,7 +16,6 @@ function Layout({ customStyle = {}, children }: Props) {
     flexDirection: 'column',
     // backgroundColor: '#2d2d2d',
     backgroundColor: 'white',
-    color: 'white',
     fontWeight: 100,
   };
 
