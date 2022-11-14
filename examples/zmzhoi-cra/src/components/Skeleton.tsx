@@ -1,4 +1,4 @@
-import { Skeleton, SkeletonCircle } from '@no-ui/skeleton';
+import { Skeleton, SkeletonCircle } from '@no-ui/core';
 import { useState } from 'react';
 
 import Layout from './Layout';

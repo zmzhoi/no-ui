@@ -1,4 +1,4 @@
-import { Popper, Position } from '@no-ui/popper';
+import { Popper, Position } from '@no-ui/core';
 
 const positionList: Position[] = [
   ['top', 'left'],

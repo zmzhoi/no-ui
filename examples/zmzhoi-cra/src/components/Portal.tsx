@@ -1,4 +1,4 @@
-import { Portal } from '@no-ui/portal';
+import { Portal } from '@no-ui/core';
 
 import Layout from '@/components/Layout';
 

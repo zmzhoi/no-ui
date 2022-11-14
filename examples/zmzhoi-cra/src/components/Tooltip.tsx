@@ -1,4 +1,4 @@
-import { Tooltip } from '@no-ui/tooltip';
+import { Tooltip } from '@no-ui/core';
 import { faker } from '@faker-js/faker';
 
 import Layout from './Layout';
