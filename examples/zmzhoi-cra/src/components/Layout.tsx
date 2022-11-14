@@ -14,7 +14,8 @@ function Layout({ customStyle = {}, children }: Props) {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    backgroundColor: '#2d2d2d',
+    // backgroundColor: '#2d2d2d',
+    backgroundColor: 'white',
     color: 'white',
     fontWeight: 100,
   };

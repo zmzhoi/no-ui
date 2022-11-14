@@ -9,13 +9,13 @@ function Arrow({ color }: Props) {
     return {
       position: 'absolute',
       left: '50%',
-      bottom: '-2px',
+      bottom: '-3px',
       borderColor: color,
       borderLeftColor: 'transparent',
       borderBottomColor: 'transparent',
-      borderWidth: '3px',
+      borderWidth: '4px',
       borderStyle: 'solid',
-      marginLeft: '-3px',
+      marginLeft: '-4px',
       transform: 'rotate(135deg)',
     };
   };

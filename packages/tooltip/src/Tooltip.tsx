@@ -6,7 +6,7 @@ import Arrow from './Arrow';
 
 export interface TooltipProps {
   message: string | number;
-  fire?: 'always' | 'ellipsis' | 'click';
+  fire?: 'over' | 'ellipsis' | 'click';
   extraStyle?: CSSProperties;
   arrow?: boolean;
   zIndex?: number;
@@ -19,7 +19,7 @@ export function getBackgroundColor(style: CSSProperties): string {
 
 export function Tooltip({
   message,
-  fire = 'always',
+  fire = 'over',
   extraStyle = undefined,
   arrow = true,
   zIndex = 10000,
@@ -63,15 +63,20 @@ export function Tooltip({
     let registeredMoveEvent = false;
 
     if (fire === 'click') {
-      const onClickChildren = (event: MouseEvent) => {
-        const { clientX, clientY } = event;
+      const onClickChildren = () => {
+        if (!childrenRefCurrent) {
+          return;
+        }
+
+        const { top, left, width } = childrenRefCurrent.getBoundingClientRect();
+        console.log(childrenRefCurrent.getBoundingClientRect());
         setStyle((previousStyle) =>
           previousStyle
             ? null
             : {
-                top: clientY - 10,
-                left: clientX,
-                transform: 'translate3d(-50%, -100%, 0)',
+                top,
+                left: left + width / 2,
+                transform: 'translate3d(-50%, calc(-100% - 10px), 0px)',
               },
         );
       };
@@ -112,7 +117,7 @@ export function Tooltip({
       };
     }
 
-    // This case :: ['ellipsis', 'always'].includes(fire)
+    // This case :: ['ellipsis', 'over'].includes(fire)
 
     if (fire === 'ellipsis') {
       const { scrollWidth, clientWidth } = childrenRefCurrent;
@@ -177,7 +182,7 @@ export function Tooltip({
           ref: childrenRef,
         }) //
       }
-      <Portal visible={showPortal}>
+      <Portal visible={showPortal} animate>
         <div
           style={{
             position: 'fixed',
@@ -196,7 +201,7 @@ export function Tooltip({
 }
 
 const defaultTooltipStyle: CSSProperties = {
-  background: 'rgba(0,0,0,0.85)',
+  background: '#272727',
   color: 'white',
   fontSize: '0.9rem',
   lineHeight: '1.1rem',

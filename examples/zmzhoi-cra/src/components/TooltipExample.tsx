@@ -13,6 +13,26 @@ const data = Array.from({ length: 30 }).map((_) => ({
 const Colors = ['red', 'blue', 'yellow', 'green', 'pink'];
 
 function TooltipExample() {
+  const type = '1';
+
+  if (type === '1') {
+    return (
+      <Layout>
+        <div style={{ margin: '5rem' }}>
+          <Tooltip message={'dnqiowpdqwpnod'} extraStyle={{ background: 'red', color: 'black' }}>
+            <button>over me</button>
+          </Tooltip>
+          <Tooltip message={'dnqiowpdqwpnod'} fire="over">
+            <button>over me</button>
+          </Tooltip>
+          <Tooltip message={'dnqiowpdqwpnod'} fire="click">
+            <button>click me</button>
+          </Tooltip>
+        </div>
+      </Layout>
+    );
+  }
+
   const text = 'Albert Goodwiner';
   return (
     <Layout customStyle={{ height: '300vh' }}>
