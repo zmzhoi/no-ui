@@ -50,8 +50,8 @@
     "examples/*"
   ],
   "dependencies": {
-    "@no-ui/portal": "^0.0.1-alpha.1",
-    "@no-ui/tooltip": "^0.0.1-alpha.1",
-    "@no-ui/utils": "^0.0.1-alpha.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@no-ui/core": "^0.0.1-alpha.1"
   }
 }

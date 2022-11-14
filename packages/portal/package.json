@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/zmzhoi/no-ui/issues"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
     "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
