@@ -29,3 +29,23 @@
 .TooltipExample li:hover {
   background: rgba(0,0,0,0.3);
 }
+
+
+.PopperExample {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;  
+}
+
+.PopperExample > .inner + .inner {
+  margin-top: 1rem;
+}
+
+
+.PopperExample .block {
+  width: 100vw;
+  height: 300vh;
+}

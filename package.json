@@ -5,7 +5,7 @@
   "description": "UI components for react with no dependency.",
   "main": "index.js",
   "scripts": {
-    "dev": "npm start -w zmzhoi-cra",
+    "dev": "npm start -w zmzhoi-cra && npm run dev -w @no-ui/core",
     "plop": "plop",
     "test:all": "jest --watch",
     "build:all": "npm run build --workspace packages/**",
@@ -33,13 +33,16 @@
     "@types/react-dom": "^18.0.8",
     "@zmzhoi/babel-preset-react": "^1.0.0",
     "@zmzhoi/eslint-config-react": "^4.0.0",
+    "autoprefixer": "^10.4.13",
     "eslint": "^8.26.0",
     "jest": "^29.2.2",
     "jest-environment-jsdom": "^29.2.2",
+    "node-sass": "^8.0.0",
     "plop": "^3.1.1",
     "prettier": "^2.7.1",
     "rollup": "^3.2.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "typescript": "^4.8.4"
   },
   "workspaces": [
