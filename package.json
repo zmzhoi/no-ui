@@ -1,9 +1,18 @@
 {
   "name": "no-ui",
   "private": true,
-  "version": "0.1.0-alpha.1",
   "description": "UI components for react with no dependency.",
   "main": "index.js",
+  "author": "zmzhoi",
+  "license": "MIT",
+  "homepage": "https://github.com/zmzhoi/no-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmzhoi/no-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zmzhoi/no-ui/issues"
+  },
   "scripts": {
     "dev": "npm start -w zmzhoi-cra && npm run dev -w @no-ui/core",
     "plop": "plop",
@@ -12,16 +21,7 @@
     "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
     "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\""
   },
-  "keywords": [
-    "UI components",
-    "UI library",
-    "UI framework",
-    "React UI"
-  ],
-  "author": "zmzhoi",
-  "license": "MIT",
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-eslint": "^9.0.1",
@@ -45,13 +45,13 @@
     "rollup-plugin-postcss": "^4.0.2",
     "typescript": "^4.8.4"
   },
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "@no-ui/core": "^0.0.1-alpha.1"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
 }
