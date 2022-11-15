@@ -11,12 +11,9 @@
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx && tsc --noEmit"
   },
   "dependencies": {
-    "@no-ui/popper": "^0.0.1-alpha.1",
-    "@no-ui/portal": "^0.0.1-alpha.1",
-    "@no-ui/skeleton": "^0.0.1-alpha.1",
-    "@no-ui/tooltip": "^0.0.1-alpha.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@no-ui/core": "^0.1.1-rc.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
