@@ -4,8 +4,10 @@
 
 ```sh
 npm i @no-ui/core
+```
 
-or
+## Usage
 
-yarn add @no-ui/core
+```javascript
+import { Tooltip, Skeleton, Popper } from '@no-ui/core';
 ```

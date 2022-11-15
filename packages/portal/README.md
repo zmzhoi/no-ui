@@ -1,11 +1,13 @@
-# @no-ui/portal
+# @no-ui/core
 
 ## Installation
 
 ```sh
 npm i @no-ui/portal
+```
 
-or
+## Usage
 
-yarn add @no-ui/portal
+```javascript
+import { Portal } from '@no-ui/portal';
 ```

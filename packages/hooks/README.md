@@ -1,11 +1,7 @@
-# @no-ui/hooks
+# @no-ui/core
 
 ## Installation
 
 ```sh
 npm i @no-ui/hooks
-
-or
-
-yarn add @no-ui/hooks
 ```

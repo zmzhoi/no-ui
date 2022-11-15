@@ -1,11 +1,13 @@
-# @no-ui/tooltip
+# @no-ui/core
 
 ## Installation
 
 ```sh
 npm i @no-ui/tooltip
+```
 
-or
+## Usage
 
-yarn add @no-ui/tooltip
+```javascript
+import { Tooltip } from '@no-ui/tooltip';
 ```

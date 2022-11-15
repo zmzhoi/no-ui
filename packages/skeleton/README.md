@@ -1,11 +1,13 @@
-# @no-ui/skeleton
+# @no-ui/core
 
 ## Installation
 
 ```sh
 npm i @no-ui/skeleton
+```
 
-or
+## Usage
 
-yarn add @no-ui/skeleton
+```javascript
+import { Skeleton } from '@no-ui/skeleton';
 ```
