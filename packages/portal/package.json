@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/portal",
-  "version": "0.1.1-rc.0",
+  "version": "0.1.1",
   "description": "@no-ui/portal is a portal component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
@@ -44,6 +44,6 @@
     "react-dom": "^17 || ^18"
   },
   "dependencies": {
-    "@no-ui/utils": "^0.1.1-rc.0"
+    "@no-ui/utils": "0.1.1"
   }
 }

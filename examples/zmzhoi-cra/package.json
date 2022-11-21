@@ -1,5 +1,6 @@
 {
   "name": "zmzhoi-cra",
+  "version": "0.0.1",
   "private": "true",
   "description": "",
   "scripts": {
@@ -13,7 +14,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@no-ui/core": "^0.1.1-rc.0"
+    "@no-ui/core": "0.1.1"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
