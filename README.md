@@ -16,8 +16,3 @@ You can also install only what you want:
 ```
 npm install @no-ui/tooltip
 ```
-
-## Components
-
-- [Portal](packages/portal/README.md)
-- [Tooltip](packages/tooltip/README.md)
