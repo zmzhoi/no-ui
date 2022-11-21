@@ -1,5 +1,13 @@
 # @no-ui/core
 
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies [4e97a8f]
+  - @no-ui/hooks@0.2.0
+  - @no-ui/popper@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
