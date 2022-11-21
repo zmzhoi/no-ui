@@ -1,5 +1,19 @@
 # @no-ui/popper
 
+## 0.2.0
+
+### Minor Changes
+
+- d001029: Changes.
+
+  - Removed setSignature().
+  - Updated @no-ui/portal.
+
+### Patch Changes
+
+- Updated dependencies [dccab02]
+  - @no-ui/portal@0.2.0
+
 ## 0.1.3
 
 ### Patch Changes

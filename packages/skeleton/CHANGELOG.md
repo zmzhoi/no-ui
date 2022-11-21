@@ -1,5 +1,14 @@
 # @no-ui/skeleton
 
+## 0.2.0
+
+### Minor Changes
+
+- 36651c4: Changes.
+
+  - Removed setSignature().
+  - Rename keyframes.
+
 ## 0.1.2
 
 ### Patch Changes

@@ -1,5 +1,21 @@
 # @no-ui/tooltip
 
+## 0.2.0
+
+### Minor Changes
+
+- 7787812: Changes.
+
+  - Added index.scss for animation.
+  - Removed setSignature().
+  - Changed zIndex to 1000 by default.
+  - Updated @no-ui/portal.
+
+### Patch Changes
+
+- Updated dependencies [dccab02]
+  - @no-ui/portal@0.2.0
+
 ## 0.1.2
 
 ### Patch Changes

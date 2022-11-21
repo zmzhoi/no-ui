@@ -1,5 +1,18 @@
 # @no-ui/core
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [d001029]
+- Updated dependencies [36651c4]
+- Updated dependencies [7787812]
+- Updated dependencies [dccab02]
+  - @no-ui/popper@0.2.0
+  - @no-ui/skeleton@0.2.0
+  - @no-ui/tooltip@0.2.0
+  - @no-ui/portal@0.2.0
+
 ## 0.1.3
 
 ### Patch Changes

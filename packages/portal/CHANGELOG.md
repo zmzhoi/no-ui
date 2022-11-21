@@ -1,5 +1,15 @@
 # @no-ui/portal
 
+## 0.2.0
+
+### Minor Changes
+
+- dccab02: Changes.
+
+  - Removed props. (only children)
+  - Added portal dom. (body > .no-ui\_\_portal)
+  - Removed setSignature().
+
 ## 0.1.2
 
 ### Patch Changes
