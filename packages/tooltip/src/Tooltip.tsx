@@ -1,6 +1,7 @@
+import './index.scss';
 import { useEffect, useRef, useState, useReducer, cloneElement, CSSProperties } from 'react';
 import { Portal } from '@no-ui/portal';
-import { debounce, setSignature } from '@no-ui/utils';
+import { debounce } from '@no-ui/utils';
 
 import Arrow from './Arrow';
 
@@ -13,7 +14,7 @@ export interface TooltipProps {
   children: JSX.Element;
 }
 
-export function getBackgroundColor(style: CSSProperties): string {
+function getBackgroundColor(style: CSSProperties): string {
   return (style.backgroundColor as string) || (style.background as string) || 'white';
 }
 
@@ -22,7 +23,7 @@ export function Tooltip({
   fire = 'over',
   extraStyle = undefined,
   arrow = true,
-  zIndex = 10000,
+  zIndex = 1000,
   children,
 }: TooltipProps) {
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -181,20 +182,24 @@ export function Tooltip({
           ref: childrenRef,
         }) //
       }
-      <Portal visible={showPortal} animate>
-        <div
-          style={{
-            position: 'fixed',
-            zIndex,
-            ...style,
-          }}
-        >
-          <div ref={tooltipRef} style={mergedStyle}>
-            {message}
-            {arrow && <Arrow color={getBackgroundColor(mergedStyle)} />}
-          </div>
-        </div>
-      </Portal>
+      {
+        showPortal && (
+          <Portal>
+            <div
+              className="no-ui__tooltip"
+              style={{
+                zIndex,
+                ...style,
+              }}
+            >
+              <div ref={tooltipRef} style={mergedStyle}>
+                {message}
+                {arrow && <Arrow color={getBackgroundColor(mergedStyle)} />}
+              </div>
+            </div>
+          </Portal>
+        ) //
+      }
     </>
   );
 }
@@ -210,4 +215,5 @@ const defaultTooltipStyle: CSSProperties = {
   wordBreak: 'break-all',
 };
 
-setSignature(Tooltip, __VERSION__);
+Tooltip.version = __VERSION__;
+Tooltip.displayName = 'tooltip';

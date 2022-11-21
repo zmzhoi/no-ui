@@ -1,4 +1,4 @@
-import { Tooltip } from '@no-ui/core';
+import { Tooltip } from '@no-ui/tooltip';
 import { faker } from '@faker-js/faker';
 
 import Layout from './Layout';
@@ -15,6 +15,8 @@ const Colors = ['red', 'blue', 'yellow', 'green', 'pink'];
 function TooltipExample() {
   const type = '1';
 
+  console.log(Tooltip.displayName);
+  console.log(Tooltip.version);
   if (type === '1') {
     return (
       <Layout>

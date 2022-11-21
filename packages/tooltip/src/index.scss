@@ -1,0 +1,12 @@
+@keyframes tooltip-fadeIn {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.no-ui__tooltip {
+  position: fixed;
+  animation: tooltip-fadeIn .35s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}

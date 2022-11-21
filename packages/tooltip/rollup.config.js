@@ -5,6 +5,8 @@ const eslint = require('@rollup/plugin-eslint');
 const { babel } = require('@rollup/plugin-babel');
 const commonjs = require('@rollup/plugin-commonjs');
 const replace = require('@rollup/plugin-replace');
+const postcss = require('rollup-plugin-postcss');
+const autoprefixer = require('autoprefixer');
 
 const pkg = require('./package.json');
 
@@ -41,6 +43,10 @@ const config = {
     replace({
       __VERSION__: JSON.stringify(pkg.version),
       preventAssignment: true,
+    }),
+    postcss({
+      minimize: true,
+      plugins: [autoprefixer()],
     }),
     peerDepsExternal(),
   ],
