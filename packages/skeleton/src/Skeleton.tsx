@@ -1,5 +1,5 @@
 import './index.scss';
-import { setSignature, resolvePixelPercent as fix } from '@no-ui/utils';
+import { resolvePixelPercent as fix } from '@no-ui/utils';
 import { useRef } from 'react';
 
 import BackYard, { AnimateType } from './BackYard';
@@ -38,4 +38,5 @@ export function Skeleton({
   );
 }
 
-setSignature(Skeleton, __VERSION__);
+Skeleton.version = __VERSION__;
+Skeleton.displayName = 'skeleton';

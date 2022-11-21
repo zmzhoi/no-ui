@@ -1,10 +1,12 @@
-import { Skeleton, SkeletonCircle } from '@no-ui/core';
+import { Skeleton, SkeletonCircle } from '@no-ui/skeleton';
 import { useState } from 'react';
 
 import Layout from './Layout';
 
 function SkeletonExample() {
   const [isLoading, setIsLoading] = useState(false);
+  console.log(Skeleton.version);
+  console.log(Skeleton.displayName);
   return (
     <Layout>
       <div

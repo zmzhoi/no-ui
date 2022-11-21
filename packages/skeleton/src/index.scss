@@ -1,4 +1,4 @@
-@keyframes no-ui__skeleton-wave {
+@keyframes skeleton-wave {
   0% {
     transform: translate3d(-100%, 0, 0)
   }
@@ -6,7 +6,7 @@
     transform: translate3d(100%, 0, 0)
   }
 }
-@keyframes no-ui__skeleton-flicker {
+@keyframes skeleton-flicker {
   0% {
     opacity: 0.1;
   }
@@ -31,8 +31,8 @@
   bottom: 0;
 }
 .no-ui__skeleton-backyard.flicker {
-  animation: no-ui__skeleton-flicker 1s linear infinite;
+  animation: skeleton-flicker 1s linear infinite;
 }
 .no-ui__skeleton-backyard.wave {
-  animation: no-ui__skeleton-wave 1s linear infinite;
+  animation: skeleton-wave 1s linear infinite;
 }
