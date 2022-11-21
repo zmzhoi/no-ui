@@ -2,7 +2,6 @@ import './index.scss';
 import { useState, useRef, useCallback, cloneElement } from 'react';
 import { useWindowEvent } from '@no-ui/hooks';
 import { Portal } from '@no-ui/portal';
-import { setSignature } from '@no-ui/utils';
 
 import Positioner from './Positioner';
 import Arrow from './Arrow';
@@ -80,22 +79,27 @@ export function Popper({
           onClick: onClickChild,
         }) //
       }
-      <Portal visible={show}>
-        <Positioner
-          ref={positionerRef}
-          popoverRef={popoverRef}
-          position={position}
-          margin={margin}
-          bubble={bubble}
-          disableOutsideClick={disableOutsideClick}
-          onClose={onClose}
-          Arrow={arrow && <Arrow position={position} arrow={arrow} />}
-        >
-          {content}
-        </Positioner>
-      </Portal>
+      {
+        show && (
+          <Portal>
+            <Positioner
+              ref={positionerRef}
+              popoverRef={popoverRef}
+              position={position}
+              margin={margin}
+              bubble={bubble}
+              disableOutsideClick={disableOutsideClick}
+              onClose={onClose}
+              Arrow={arrow && <Arrow position={position} arrow={arrow} />}
+            >
+              {content}
+            </Positioner>
+          </Portal>
+        ) //
+      }
     </>
   );
 }
 
-setSignature(Popper, __VERSION__);
+Popper.version = __VERSION__;
+Popper.displayName = 'popper';

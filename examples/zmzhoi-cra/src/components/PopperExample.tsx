@@ -1,4 +1,4 @@
-import { Popper, Position } from '@no-ui/core';
+import { Popper, Position } from '@no-ui/popper';
 
 const positionList: Position[] = [
   ['top', 'left'],
@@ -30,7 +30,7 @@ function PopperExample() {
                 // disableOutsideClick
                 arrow={{
                   color: 'rgba(0,0,0,0.5)',
-                  size: 10,
+                  size: 5,
                   // distance: 5,
                 }}
                 content={

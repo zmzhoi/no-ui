@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "@no-ui/hooks": "0.2.0",
-    "@no-ui/portal": "0.1.2",
-    "@no-ui/utils": "0.1.2"
+    "@no-ui/portal": "0.1.2"
   }
 }

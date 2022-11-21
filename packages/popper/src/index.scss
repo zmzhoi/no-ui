@@ -1,4 +1,4 @@
-@keyframes fadeIn {
+@keyframes popper-fadeIn {
   0% {
     opacity: 0;
     transform: translate3d(0, 3px, 0);
@@ -8,9 +8,9 @@
   }
 }
 
-body > .no-ui__popper {
+.no-ui__popper {
   position: fixed;
-  z-index: 2000;
-  animation: fadeIn .2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  z-index: 1000;
+  animation: popper-fadeIn .2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
 }
 
