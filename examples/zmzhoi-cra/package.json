@@ -14,7 +14,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@no-ui/core": "0.1.1"
+    "@no-ui/core": "0.1.2"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",

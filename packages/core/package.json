@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "UI components for react with no dependency.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
@@ -43,11 +43,11 @@
     "react-dom": "^17 || ^18"
   },
   "dependencies": {
-    "@no-ui/hooks": "0.1.1",
-    "@no-ui/popper": "0.1.1",
-    "@no-ui/portal": "0.1.1",
-    "@no-ui/skeleton": "0.1.1",
-    "@no-ui/tooltip": "0.1.1",
-    "@no-ui/utils": "0.1.1"
+    "@no-ui/hooks": "0.1.2",
+    "@no-ui/popper": "0.1.2",
+    "@no-ui/portal": "0.1.2",
+    "@no-ui/skeleton": "0.1.2",
+    "@no-ui/tooltip": "0.1.2",
+    "@no-ui/utils": "0.1.2"
   }
 }

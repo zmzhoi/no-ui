@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/popper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "@no-ui/popper is a popper component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
@@ -44,8 +44,8 @@
     "react-dom": "^17 || ^18"
   },
   "dependencies": {
-    "@no-ui/hooks": "0.1.1",
-    "@no-ui/portal": "0.1.1",
-    "@no-ui/utils": "0.1.1"
+    "@no-ui/hooks": "0.1.2",
+    "@no-ui/portal": "0.1.2",
+    "@no-ui/utils": "0.1.2"
   }
 }
