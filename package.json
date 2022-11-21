@@ -17,7 +17,7 @@
     "dev": "npm start -w zmzhoi-cra && npm run dev -w @no-ui/core",
     "create-pkg:component": "plop",
     "test": "jest --watch",
-    "build:all": "npm run build --workspace packages/**",
+    "build": "npm run build --workspaces --if-present",
     "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
     "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\"",
     "changeset": "changeset",
@@ -49,7 +49,7 @@
     "rollup": "^3.2.5",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "typescript": "^4.8.4"
+    "typescript": "4.8.4"
   },
   "workspaces": [
     "packages/*",
