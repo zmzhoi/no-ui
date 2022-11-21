@@ -8,7 +8,7 @@ function PortalExample() {
    */
   return (
     <Layout>
-      <Portal visible={true}>
+      <Portal>
         <h1>This is a portal</h1>
       </Portal>
     </Layout>

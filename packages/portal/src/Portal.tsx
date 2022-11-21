@@ -1,54 +1,37 @@
-import { setSignature } from '@no-ui/utils';
-import { cloneElement, useRef, ReactElement, useLayoutEffect } from 'react';
+import { useRef, ReactElement, useLayoutEffect, useReducer } from 'react';
 import { createPortal } from 'react-dom';
 
 export interface PortalProps {
-  visible: boolean;
-  container?: Element | DocumentFragment;
-  animate?: boolean;
   children: ReactElement;
 }
 
-export function Portal({ visible, container = undefined, animate = false, children }: PortalProps) {
-  const ref = useRef<HTMLElement>(null);
+export function Portal({ children }: PortalProps) {
+  const portal = useRef<HTMLDivElement | null>(null);
+  const [, forceUpdate] = useReducer(() => ({}), {});
 
   useLayoutEffect(() => {
-    if (!visible) {
-      return;
-    }
+    const parent = document.body;
+    portal.current = document.createElement('div');
+    portal.current.className = 'no-ui__portal';
+    parent.appendChild(portal.current);
+    forceUpdate(); // Force rerender
 
-    if (!animate || !ref.current) {
-      return;
-    }
+    // Cleanup portal.
+    return function cleanup() {
+      if (portal.current) {
+        if (parent.contains(portal.current)) {
+          parent.removeChild(portal.current);
+        }
+      }
+    };
+  }, []);
 
-    ref.current.animate(
-      [
-        {
-          opacity: 0.2,
-        },
-        {
-          opacity: 1,
-        },
-      ],
-      {
-        duration: 350,
-        easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)',
-      },
-    );
-  }, [animate, visible]);
-
-  if (!visible) {
+  if (!portal.current) {
     return null;
   }
 
-  const _container = container || window.document.body;
-
-  return createPortal(
-    cloneElement(children, {
-      ref,
-    }),
-    _container,
-  );
+  return createPortal(children, portal.current);
 }
 
-setSignature(Portal, __VERSION__);
+Portal.version = __VERSION__;
+Portal.displayName = 'portal';
