@@ -1,5 +1,18 @@
 # @no-ui/popper
 
+## 0.2.1
+
+### Patch Changes
+
+- 0bca8a6: Changes.
+
+  - removed console.log().
+  - changed classnames.
+
+- 7364c1d: Changes.
+
+  - apply module scss
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,5 +1,18 @@
 # @no-ui/skeleton
 
+## 0.2.1
+
+### Patch Changes
+
+- 0bca8a6: Changes.
+
+  - removed console.log().
+  - changed classnames.
+
+- eceb7ea: Changes.
+
+  - Apply module scss.
+
 ## 0.2.0
 
 ### Minor Changes

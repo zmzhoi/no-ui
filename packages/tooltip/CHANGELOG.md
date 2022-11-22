@@ -1,5 +1,13 @@
 # @no-ui/tooltip
 
+## 0.2.1
+
+### Patch Changes
+
+- d8afcd4: Changes.
+
+  - Apply module scss.
+
 ## 0.2.0
 
 ### Minor Changes

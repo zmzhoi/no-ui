@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/overlay",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "@no-ui/overlay is a overlay component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",

@@ -1,5 +1,17 @@
 # @no-ui/core
 
+## 0.1.5
+
+### Patch Changes
+
+- Updated dependencies [d8afcd4]
+- Updated dependencies [0bca8a6]
+- Updated dependencies [eceb7ea]
+- Updated dependencies [7364c1d]
+  - @no-ui/tooltip@0.2.1
+  - @no-ui/popper@0.2.1
+  - @no-ui/skeleton@0.2.1
+
 ## 0.1.4
 
 ### Patch Changes
