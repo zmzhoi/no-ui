@@ -22,7 +22,8 @@
     "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\"",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.2",
@@ -54,5 +55,8 @@
   "workspaces": [
     "packages/*",
     "examples/*"
-  ]
+  ],
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
 }
