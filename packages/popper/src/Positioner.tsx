@@ -3,6 +3,7 @@ import { useLayoutEffect, useState, ReactNode, CSSProperties, forwardRef, RefObj
 
 import { Position } from './Popper';
 import { getPositionStyle } from './utils';
+import styles from './index.module.scss';
 
 interface PositionerProps {
   popoverRef: RefObject<HTMLElement>;
@@ -51,7 +52,7 @@ const Positioner = forwardRef<HTMLDivElement, PositionerProps>(
     return (
       <div
         ref={ref} //
-        className="no-ui__popper"
+        className={styles['no-ui__popper']}
         style={positionStyle}
         onClick={() => {
           if (bubble) {

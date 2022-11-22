@@ -1,4 +1,3 @@
-import './index.scss';
 import { useState, useRef, useCallback, cloneElement } from 'react';
 import { useWindowEvent } from '@no-ui/hooks';
 import { Portal } from '@no-ui/portal';
