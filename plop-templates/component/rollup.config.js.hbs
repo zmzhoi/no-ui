@@ -45,7 +45,6 @@ const config = {
       preventAssignment: true,
     }),
     postcss({
-      modules: true,
       minimize: true,
       plugins: [autoprefixer()],
     }),

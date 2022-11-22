@@ -1,8 +1,8 @@
-import './index.scss';
 import { useEffect, useRef, useState, useReducer, cloneElement, CSSProperties } from 'react';
 import { Portal } from '@no-ui/portal';
 import { debounce } from '@no-ui/utils';
 
+import styles from './Tooltip.module.scss';
 import Arrow from './Arrow';
 
 export interface TooltipProps {
@@ -186,7 +186,7 @@ export function Tooltip({
         showPortal && (
           <Portal>
             <div
-              className="no-ui__tooltip"
+              className={styles['noui-tooltip']}
               style={{
                 zIndex,
                 ...style,
