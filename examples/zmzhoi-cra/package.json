@@ -11,9 +11,16 @@
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx && tsc --noEmit"
   },
   "dependencies": {
+    "@no-ui/core": "0.1.4",
+    "@no-ui/hooks": "^0.2.0",
+    "@no-ui/overlay": "^0.1.1-rc.0",
+    "@no-ui/popper": "^0.2.0",
+    "@no-ui/portal": "^0.2.0",
+    "@no-ui/skeleton": "^0.2.0",
+    "@no-ui/tooltip": "^0.2.0",
+    "@no-ui/utils": "^0.1.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@no-ui/core": "0.1.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
