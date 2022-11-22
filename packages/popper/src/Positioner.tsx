@@ -3,7 +3,7 @@ import { useLayoutEffect, useState, ReactNode, CSSProperties, forwardRef, RefObj
 
 import { Position } from './Popper';
 import { getPositionStyle } from './utils';
-import styles from './index.module.scss';
+import styles from './Popper.module.scss';
 
 interface PositionerProps {
   popoverRef: RefObject<HTMLElement>;

@@ -1,4 +1,4 @@
-import styles from './index.module.scss';
+import styles from './Overlay.module.scss';
 export interface OverlayProps {
   color?: string;
 }
@@ -6,7 +6,7 @@ export interface OverlayProps {
 export function Overlay({ color }: OverlayProps) {
   return (
     <div
-      className={styles['no-ui__overlay']}
+      className={styles['noui-overlay']}
       style={{ background: color || 'rgba(240, 240, 240, 0.8)' }}
     ></div>
   );

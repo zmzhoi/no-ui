@@ -14,7 +14,6 @@ function BackYard({ color, animate }: BackYardProps) {
       animate === 'wave' ? `linear-gradient(90deg, transparent, ${color}, transparent)` : color,
   };
 
-  console.log(styles);
   const classNames = [styles['noui-backyard'], styles[animate]].join(' ');
   return <div className={classNames} style={style} />;
 }
