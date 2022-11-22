@@ -1,7 +1,7 @@
-import './index.scss';
 import { resolvePixelPercent as fix } from '@no-ui/utils';
 import { useRef } from 'react';
 
+import styles from './Skeleton.module.scss';
 import BackYard, { AnimateType } from './BackYard';
 
 export interface SkeletonProps {
@@ -32,7 +32,7 @@ export function Skeleton({
   };
 
   return (
-    <div ref={ref} className="no-ui__skeleton" style={style}>
+    <div ref={ref} className={styles['noui-skeleton']} style={style}>
       {animate && <BackYard color={color} animate={animate} />}
     </div>
   );

@@ -1,5 +1,7 @@
 import { CSSProperties } from 'react';
 
+import styles from './BackYard.module.scss';
+
 export type AnimateType = 'flicker' | 'wave';
 
 interface BackYardProps {
@@ -12,7 +14,8 @@ function BackYard({ color, animate }: BackYardProps) {
       animate === 'wave' ? `linear-gradient(90deg, transparent, ${color}, transparent)` : color,
   };
 
-  const classNames = ['no-ui__skeleton-backyard', animate].join(' ');
+  console.log(styles);
+  const classNames = [styles['noui-backyard'], styles[animate]].join(' ');
   return <div className={classNames} style={style} />;
 }
 

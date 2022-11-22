@@ -1,7 +1,7 @@
-import './index.scss';
 import { setSignature, resolvePixelPercent as fix } from '@no-ui/utils';
 import { useRef } from 'react';
 
+import styles from './SkeletonCircle.module.scss';
 import BackYard, { AnimateType } from './BackYard';
 
 export interface SkeletonCircleProps {
@@ -28,7 +28,7 @@ export function SkeletonCircle({
   };
 
   return (
-    <div ref={ref} className="no-ui__skeleton" style={style}>
+    <div ref={ref} className={styles['noui-skeleton-circle']} style={style}>
       {animate && <BackYard color={color} animate={animate} />}
     </div>
   );
