@@ -1,7 +1,7 @@
 ### New.
 
 - [ ] Modal
-- [ ] Spinner
+- [x] loader (done only box)
 - [ ] Alert
 - [ ] Toast
 - [ ] 🤔 Button
