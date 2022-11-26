@@ -1,0 +1,47 @@
+{
+  "name": "@no-ui/loader",
+  "version": "0.1.0",
+  "description": "@no-ui/loader is loader component for react.",
+  "main": "dist/cjs/index.cjs.js",
+  "module": "dist/esm/index.esm.js",
+  "sideEffects": false,
+  "types": "dist/types",
+  "author": "zmzhoi <zmzhoi@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/zmzhoi/no-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmzhoi/no-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zmzhoi/no-ui/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "loader",
+    "react",
+    "react ui",
+    "react ui component",
+    "ui component"
+  ],
+  "scripts": {
+    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
+    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prebuild": "npm run format && npm run lint",
+    "build": "tsc && rollup -c",
+    "dev": "rollup -cw",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18"
+  },
+  "devDependencies": {
+    "react": "^17 || ^18"
+  },
+  "dependencies": {
+    "@no-ui/portal": "^0.2.0"
+  }
+}
