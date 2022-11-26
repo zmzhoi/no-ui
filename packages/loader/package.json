@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/loader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "@no-ui/loader is loader component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",

@@ -1,5 +1,23 @@
 # @no-ui/core
 
+## 0.1.6
+
+### Patch Changes
+
+- 13dabaf: Added `@no-ui/looader`
+- 3fb8e89: Fix.
+
+  - Fixed dependencies (removed portal on dep of loader)
+  - Added overlay on dep of core.
+  - Updated build script.
+
+- 812d0ba: Add
+
+  - added overlay.
+
+- Updated dependencies [3fb8e89]
+  - @no-ui/loader@0.2.1
+
 ## 0.1.5
 
 ### Patch Changes
