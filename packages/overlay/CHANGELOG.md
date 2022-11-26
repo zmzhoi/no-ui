@@ -1,5 +1,13 @@
 # @no-ui/overlay
 
+## 0.2.2
+
+### Patch Changes
+
+- 93923d1: Fix.
+
+  - Fixed previous commit.
+
 ## 0.2.1
 
 ### Patch Changes
