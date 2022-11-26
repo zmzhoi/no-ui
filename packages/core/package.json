@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "UI components for react with no dependency.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
@@ -49,7 +49,7 @@
     "@no-ui/skeleton": "0.2.1",
     "@no-ui/tooltip": "0.2.1",
     "@no-ui/utils": "0.1.2",
-    "@no-ui/loader": "0.2.0",
+    "@no-ui/loader": "0.2.1",
     "@no-ui/overlay": "0.2.1"
   }
 }
