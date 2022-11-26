@@ -40,8 +40,5 @@
   },
   "devDependencies": {
     "react": "^17 || ^18"
-  },
-  "dependencies": {
-    "@no-ui/portal": "^0.2.0"
   }
 }

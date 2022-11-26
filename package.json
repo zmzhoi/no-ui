@@ -17,7 +17,7 @@
     "dev": "npm start -w zmzhoi-cra && npm run dev -w @no-ui/core",
     "create-pkg:component": "plop",
     "test": "jest --watch",
-    "build": "npm run build -w @no-ui/hooks -w @no-ui/utils -w @no-ui/skeleton -w @no-ui/portal -w @no-ui/tooltip -w @no-ui/popper -w @no-ui/core",
+    "build": "npm run build -w @no-ui/hooks -w @no-ui/overlay -w @no-ui/loader -w @no-ui/utils -w @no-ui/skeleton -w @no-ui/portal -w @no-ui/tooltip -w @no-ui/popper -w @no-ui/core",
     "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\"",
     "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\"",
     "changeset": "changeset",
