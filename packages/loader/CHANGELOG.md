@@ -1,5 +1,17 @@
 # @no-ui/loader
 
+## 0.2.2
+
+### Patch Changes
+
+- be86382: Add.
+
+  - Added test case.
+
+  Changes.
+
+  - Changed style tag's id to uuid.
+
 ## 0.2.1
 
 ### Patch Changes

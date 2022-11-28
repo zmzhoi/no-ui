@@ -1,5 +1,12 @@
 # @no-ui/core
 
+## 0.1.8
+
+### Patch Changes
+
+- Updated dependencies [be86382]
+  - @no-ui/loader@0.2.2
+
 ## 0.1.7
 
 ### Patch Changes
