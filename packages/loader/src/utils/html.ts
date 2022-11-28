@@ -6,7 +6,7 @@ type HTMLType = {
 
 export const html: HTMLType = {
   box: `
-  <div>
+  <div data-testid="noui-box-loader">
     <div class="overlay"></div>
       <div class="box-loader">
         <svg version="1.1"

@@ -1,6 +1,7 @@
 import { classes } from './utils/classes';
 import { html } from './utils/html';
 import { styles } from './utils/styles';
+import { uuid } from './utils/uuid';
 
 export type LoaderType = 'box';
 
@@ -14,7 +15,7 @@ export default class Loader {
 
   constructor(type: LoaderType, container?: HTMLElement) {
     this.type = type;
-    this.styleId = `noui-${type}-loader-${Date.now()}`;
+    this.styleId = `noui-${type}loader-${uuid()}`;
     this.containerDom = container || document.body;
   }
 
