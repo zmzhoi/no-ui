@@ -2,7 +2,6 @@
   "name": "no-ui",
   "private": true,
   "description": "UI components for react with no dependency.",
-  "main": "index.js",
   "author": "zmzhoi",
   "license": "MIT",
   "homepage": "https://github.com/zmzhoi/no-ui#readme",

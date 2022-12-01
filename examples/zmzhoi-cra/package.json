@@ -1,7 +1,7 @@
 {
   "name": "zmzhoi-cra",
   "version": "0.0.1",
-  "private": "true",
+  "private": true,
   "description": "",
   "scripts": {
     "start": "node scripts/start.js",
