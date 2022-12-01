@@ -3,7 +3,7 @@ const env = process.env.NODE_ENV;
 
 if (env === 'test') {
   babelConfig = {
-    presets: ['@zmzhoi/babel-preset-react'],
+    presets: ['@zmzhoi/babel-preset-react-app'],
   };
 } else {
   babelConfig = {
