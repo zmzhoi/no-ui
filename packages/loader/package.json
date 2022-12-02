@@ -5,7 +5,7 @@
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
   "sideEffects": false,
-  "types": "dist/types",
+  "types": "dist/types/index.d.ts",
   "author": "zmzhoi <zmzhoi@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/zmzhoi/no-ui#readme",
