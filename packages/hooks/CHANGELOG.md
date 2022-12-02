@@ -1,5 +1,13 @@
 # @no-ui/hooks
 
+## 0.2.1
+
+### Patch Changes
+
+- 0bb0bc0: Fix.
+
+  - Specify types field in package.json to import correctly.
+
 ## 0.2.0
 
 ### Minor Changes

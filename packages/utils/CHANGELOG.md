@@ -1,5 +1,13 @@
 # @no-ui/utils
 
+## 0.1.3
+
+### Patch Changes
+
+- 0bb0bc0: Fix.
+
+  - Specify types field in package.json to import correctly.
+
 ## 0.1.2
 
 ### Patch Changes

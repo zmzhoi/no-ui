@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/skeleton",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "@no-ui/skeleton is a skeleton component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
@@ -42,6 +42,6 @@
     "react": "^17 || ^18"
   },
   "dependencies": {
-    "@no-ui/utils": "0.1.2"
+    "@no-ui/utils": "0.1.3"
   }
 }

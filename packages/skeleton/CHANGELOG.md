@@ -1,5 +1,16 @@
 # @no-ui/skeleton
 
+## 0.2.2
+
+### Patch Changes
+
+- 0bb0bc0: Fix.
+
+  - Specify types field in package.json to import correctly.
+
+- Updated dependencies [0bb0bc0]
+  - @no-ui/utils@0.1.3
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @no-ui/loader
 
+## 0.2.3
+
+### Patch Changes
+
+- 0bb0bc0: Fix.
+
+  - Specify types field in package.json to import correctly.
+
 ## 0.2.2
 
 ### Patch Changes
