@@ -1,4 +1,4 @@
-# @no-ui/core
+# @no-ui/skeleton
 
 ## Installation
 
