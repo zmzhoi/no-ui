@@ -1,5 +1,12 @@
 # @no-ui/core
 
+## 0.1.12
+
+### Patch Changes
+
+- Updated dependencies [81722b4]
+  - @no-ui/close-button@0.2.0
+
 ## 0.1.11
 
 ### Patch Changes

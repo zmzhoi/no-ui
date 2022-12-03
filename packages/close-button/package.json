@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/close-button",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "@no-ui/close-button is a close button for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
