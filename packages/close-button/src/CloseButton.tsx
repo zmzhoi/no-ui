@@ -1,10 +1,10 @@
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, useState, ButtonHTMLAttributes, useEffect, useRef } from 'react';
 
 import styles from './CloseButton.module.scss';
 import SIZES, { SIZE } from './sizes';
 import { Large, Medium, Small } from './svg';
 
-export interface CloseButtonProps {
+export interface CloseButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * CloseButton `size`. always width and height are same.
    */
@@ -32,9 +32,32 @@ export function CloseButton({
   size,
   color = '#26292c',
   radius = 2,
-  animate = false, //
+  animate = false,
+  ...nativeProps //
 }: CloseButtonProps) {
+  const ref = useRef<HTMLButtonElement>(null);
   const [className, setClassName] = useState<'in' | 'out' | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    const refCurrent = ref.current;
+    const onMouseEnter = () => setClassName('in');
+    const onMouseLeave = () => setClassName('out');
+    refCurrent.addEventListener('mouseenter', onMouseEnter);
+    refCurrent.addEventListener('mouseleave', onMouseLeave);
+
+    return function cleanup() {
+      if (!refCurrent) {
+        return;
+      }
+
+      refCurrent.removeEventListener('mouseenter', onMouseEnter);
+      refCurrent.removeEventListener('mouseleave', onMouseLeave);
+    };
+  }, []);
 
   const baseStyle: CSSProperties = {
     width: SIZES[size],
@@ -42,16 +65,20 @@ export function CloseButton({
     borderRadius: `${radius}px`,
   };
 
-  const classNames = [styles['noui-close-button'], animate && className ? styles[className] : null]
+  const classNames = [
+    styles['noui-close-button'],
+    animate && className ? styles[className] : null,
+    nativeProps.className && nativeProps.className,
+  ]
     .filter(Boolean)
     .join(' ');
 
   return (
     <button
+      ref={ref}
+      {...nativeProps}
       className={classNames}
-      style={baseStyle} //
-      onMouseEnter={() => setClassName('in')}
-      onMouseLeave={() => setClassName('out')}
+      style={{ ...baseStyle, ...(nativeProps.style && { ...nativeProps.style }) }} //
     >
       {
         size === 'lg' ? (
