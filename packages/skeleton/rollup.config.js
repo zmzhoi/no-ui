@@ -7,6 +7,7 @@ const commonjs = require('@rollup/plugin-commonjs');
 const replace = require('@rollup/plugin-replace');
 const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
+const typescript = require('rollup-plugin-typescript2');
 
 const pkg = require('./package.json');
 
@@ -28,6 +29,10 @@ const config = {
     },
   ],
   plugins: [
+    process.env.BUILD_ENV === 'development' &&
+      typescript({
+        useTsconfigDeclarationDir: true,
+      }),
     eslint({
       throwOnError: true,
       throwOnWarning: true,
@@ -49,7 +54,7 @@ const config = {
       plugins: [autoprefixer()],
     }),
     peerDepsExternal(),
-  ],
+  ].filter(Boolean),
   external: [/@no-ui/],
 };
 

@@ -1,3 +1,21 @@
+# Guide
+
+## Develop
+
+Start development server:
+
+```
+npm start -w zmzhoi-cra
+```
+
+And then, run as watch mode package you want to develop:
+
+```
+npm run dev -w @no-ui/{package-name}
+```
+
+## Etc.
+
 ```sh
 # init
 npm init -w packages/portal
