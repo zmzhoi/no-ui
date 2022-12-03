@@ -1,0 +1,42 @@
+.noui-close-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color .14s ease-out;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.noui-close-button.in {
+  svg {
+    animation: spin-in .25s ease forwards;
+  }
+}
+
+.noui-close-button.out {
+  svg {
+    animation: spin-out .25s ease forwards;
+  }
+}
+
+@keyframes spin-in {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin-out {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

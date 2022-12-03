@@ -1,4 +1,4 @@
 {
   "extends": ["@zmzhoi/eslint-config-react-app"],
-  "ignorePatterns": ["dist", "**/*.scss", "**/*.css"]
+  "ignorePatterns": ["dist", "**/*.scss", "**/*.css", "**/*.svg"]
 }

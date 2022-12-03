@@ -1,0 +1,44 @@
+{
+  "name": "@no-ui/close-button",
+  "version": "0.1.0",
+  "description": "@no-ui/close-button is a close button for react.",
+  "main": "dist/cjs/index.cjs.js",
+  "module": "dist/esm/index.esm.js",
+  "sideEffects": false,
+  "types": "dist/types/index.d.ts",
+  "author": "zmzhoi <zmzhoi@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/zmzhoi/no-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmzhoi/no-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zmzhoi/no-ui/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "close-button",
+    "react",
+    "react ui",
+    "react ui component",
+    "ui component"
+  ],
+  "scripts": {
+    "format": "prettier --check \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
+    "format:fix": "prettier --write \"**/*.(ts|tsx|js|jsx|json|md)\" --ignore-path ../../.prettierignore",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prebuild": "npm run format && npm run lint",
+    "build": "tsc && rollup -c",
+    "dev": "BUILD_ENV=development rollup -cw",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18"
+  },
+  "devDependencies": {
+    "react": "^17 || ^18"
+  }
+}

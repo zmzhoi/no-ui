@@ -8,6 +8,7 @@ const replace = require('@rollup/plugin-replace');
 const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
 const typescript = require('rollup-plugin-typescript2');
+const svgr = require('@svgr/rollup');
 
 const pkg = require('./package.json');
 
@@ -29,6 +30,7 @@ const config = {
     },
   ],
   plugins: [
+    svgr(),
     process.env.BUILD_ENV === 'development' &&
       typescript({
         useTsconfigDeclarationDir: true,
