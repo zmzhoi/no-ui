@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/skeleton",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "@no-ui/skeleton is a skeleton component for react.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",

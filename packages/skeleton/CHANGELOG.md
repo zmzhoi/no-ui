@@ -1,5 +1,15 @@
 # @no-ui/skeleton
 
+## 0.3.0
+
+### Minor Changes
+
+- 32f0347: Refactor.
+
+  - Added `wave` animate skeleton.
+  - Added props(`waveColor`, `duration`, `extraStyle`)
+  - Changed more easy to use.
+
 ## 0.2.2
 
 ### Patch Changes
