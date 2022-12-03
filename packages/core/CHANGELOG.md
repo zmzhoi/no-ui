@@ -1,5 +1,16 @@
 # @no-ui/core
 
+## 0.1.11
+
+### Patch Changes
+
+- bbedab5: Feat.
+
+  - Added `@no-ui/close-button`.
+
+- Updated dependencies [5b06b25]
+  - @no-ui/close-button@0.1.1
+
 ## 0.1.10
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@no-ui/core",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "UI components for react with no dependency.",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.esm.js",
@@ -51,6 +51,6 @@
     "@no-ui/utils": "0.1.3",
     "@no-ui/loader": "0.2.3",
     "@no-ui/overlay": "0.2.3",
-    "@no-ui/close-button": "0.1.0"
+    "@no-ui/close-button": "0.1.1"
   }
 }
