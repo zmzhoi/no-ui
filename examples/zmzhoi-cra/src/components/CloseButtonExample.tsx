@@ -3,22 +3,24 @@ import { CloseButton, CloseIcon } from '@no-ui/close-button';
 function CloseButtonExample() {
   return (
     <div style={{ overflow: 'auto' }}>
-      <div
-        style={{
-          width: '800px',
-          height: '700px',
-          border: '1px solid black',
-          position: 'fixed',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}
-      >
-        <CloseButton size="lg" />
-        <CloseButton size="md" />
+      <div>
+        <CloseButton size="lg" onClick={() => alert('hi')} />
+        <CloseButton
+          size="md"
+          onClick={(event) => {
+            console.log(event);
+          }}
+        />
         <CloseButton size="sm" />
         <hr />
-        <CloseButton size="lg" animate />
+        <CloseButton
+          size="lg"
+          animate
+          onMouseEnter={(event) => console.log('enter : ', event)}
+          onMouseLeave={(event) => console.log('leave : ', event)}
+          className={'whatever good man'}
+          style={{ marginBottom: '5rem' }}
+        />
         <CloseButton size="md" animate />
         <CloseButton size="sm" animate />
         <hr />
