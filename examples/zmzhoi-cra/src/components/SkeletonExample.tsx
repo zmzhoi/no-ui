@@ -1,42 +1,42 @@
 import { Skeleton, SkeletonCircle } from '@no-ui/skeleton';
-import { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 
 import Layout from './Layout';
 
 function SkeletonExample() {
   const [isLoading, setIsLoading] = useState(false);
-  console.log(Skeleton.version);
-  console.log(Skeleton.displayName);
+
+  const wrapperStyle: CSSProperties = {
+    margin: '5rem',
+    minWidth: '800px',
+    minHeight: '500px',
+    border: '2px solid black',
+    padding: '1rem',
+  };
+
   return (
     <Layout>
-      <div
-        style={{
-          margin: '5rem',
-          minWidth: '800px',
-          minHeight: '500px',
-          border: '2px solid black',
-          padding: '1rem',
-        }}
-      >
+      <div style={wrapperStyle}>
         {
           isLoading ? (
             <>
-              <Skeleton width={300} height={26} radius={0} animate={false} />
-              <div style={{ margin: '1rem' }} />
-              <Skeleton width={300} height={26} radius={0} animate="wave" />
-              <div style={{ margin: '1rem' }} />
-              <Skeleton width={300} height={26} radius={0} />
-              <div style={{ margin: '1rem' }} />
-              <Skeleton height={50} radius={3} color="red" />
-              <div style={{ margin: '1rem' }} />
-              <Skeleton height={50} radius={3} color="pink" animate="wave" />
-              <div style={{ margin: '1rem' }} />
-              <SkeletonCircle animate={false} />
-              <div style={{ margin: '1rem' }} />
-              <SkeletonCircle inline />
-              <SkeletonCircle animate="wave" inline />
-              <div style={{ margin: '1rem' }} />
-              <SkeletonCircle size={120} animate="wave" color={'blue'} />
+              <Skeleton height={26} />
+              <hr />
+              <Skeleton height={26} radius={0} animate="none" extraStyle={{ marginTop: '2rem' }} />
+              <hr />
+              <Skeleton height={40} animate="flicker" duration={0.5} />
+              <hr />
+              <Skeleton height={40} animate="wave" duration={1} />
+              <hr />
+              <SkeletonCircle size={20} />
+              <SkeletonCircle size={20} animate="wave" />
+              <SkeletonCircle size={30} animate="wave" />
+              <SkeletonCircle size={40} animate="wave" />
+              <SkeletonCircle size={80} inline />
+              <SkeletonCircle size={80} inline animate="wave" />
+              <SkeletonCircle size={80} inline animate="flicker" />
+              <SkeletonCircle size={80} inline animate="none" />
+              <SkeletonCircle size={100} extraStyle={{ marginLeft: '10rem' }} />
             </>
           ) : (
             <Div>I am content!</Div>

@@ -1,5 +1,46 @@
 .noui-skeleton {
   position: relative;
-  overflow: hidden;
+  box-sizing: border-box;
+}
+.noui-skeleton.flicker {
+  animation-name: keyframe-flicker;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.noui-skeleton > span {
+  animation-name: keyframe-wave;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
   display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+}
+.noui-skeleton.wave {
+  overflow: hidden;
+}
+
+@keyframes keyframe-flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes keyframe-wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

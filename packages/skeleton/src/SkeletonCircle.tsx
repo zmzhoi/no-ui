@@ -1,37 +1,84 @@
-import { setSignature, resolvePixelPercent as fix } from '@no-ui/utils';
-import { useRef } from 'react';
+import { resolvePixelPercent as fixUnit } from '@no-ui/utils';
+import { CSSProperties } from 'react';
 
-import styles from './SkeletonCircle.module.scss';
-import BackYard, { AnimateType } from './BackYard';
+import { AnimateType } from './Skeleton';
+import styles from './Skeleton.module.scss';
 
 export interface SkeletonCircleProps {
-  size?: number | string;
-  animate?: AnimateType | false;
+  /**
+   * SkeletonCircle `size`.
+   */
+  size: number | string;
+  /**
+   * SkeletonCircle animation type.
+   * @default
+   * flicker
+   */
+  animate?: AnimateType;
+  /**
+   * Skeleton color
+   * @default
+   * rgba(0,0,0,0.08)
+   */
   color?: string;
+  /**
+   * Skeleton wave color on wave animate.
+   * @default
+   * rgba(0,0,0,0.1)
+   */
+  waveColor?: string;
+  /**
+   * Skeleton animation duration in seconds.
+   * @default
+   * 2
+   */
+  duration?: number;
+  /**
+   * It true, `display: inline-block`. or `display: block`.
+   */
   inline?: boolean;
+  /**
+   * SkeletonCircle's style.
+   */
+  extraStyle?: CSSProperties;
 }
 
 export function SkeletonCircle({
-  size = '50px',
+  size,
   animate = 'flicker',
-  color = '#e0e0e0',
-  inline = false,
+  duration = 2,
+  color = 'rgba(0,0,0,0.08)',
+  waveColor = 'rgba(0,0,0,0.1)',
+  inline,
+  extraStyle,
 }: SkeletonCircleProps) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const style = {
-    width: fix(size),
-    height: fix(size),
+  const baseStyle: CSSProperties = {
+    width: fixUnit(size),
+    height: fixUnit(size),
     borderRadius: '50%',
-    background: 'rgba(245, 245, 245)',
+    background: color,
     display: inline ? 'inline-block' : 'block',
+    ...(animate === 'flicker' && { animationDuration: `${duration}s` }),
+    ...(extraStyle && { ...extraStyle }),
   };
 
+  const classNames = [styles['noui-skeleton'], animate !== 'none' && styles[animate]]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <div ref={ref} className={styles['noui-skeleton-circle']} style={style}>
-      {animate && <BackYard color={color} animate={animate} />}
+    <div className={classNames} style={baseStyle}>
+      {animate === 'wave' && (
+        <span
+          style={{
+            background: `linear-gradient(90deg, transparent, ${waveColor}, transparent)`,
+            animationDuration: `${duration}s`,
+          }}
+        ></span>
+      )}
     </div>
   );
 }
 
-setSignature(SkeletonCircle, __VERSION__);
+SkeletonCircle.version = __VERSION__;
+SkeletonCircle.displayName = 'skeleton-circle';
