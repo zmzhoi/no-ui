@@ -1,4 +1,5 @@
 import { Popper, Position } from '@no-ui/popper';
+import { useCallback, useState } from 'react';
 
 const positionList: Position[] = [
   ['top', 'left'],
@@ -16,9 +17,41 @@ const positionList: Position[] = [
 ];
 
 function PopperExample() {
+  const [open, setOpen] = useState(true);
+
+  const onClose = useCallback(() => {
+    setOpen(false);
+  }, []);
   return (
     <>
       <div className="PopperExample" onClick={() => console.log('This is a App')}>
+        <Popper
+          position={['bottom', 'center']}
+          // margin={10}
+          // bubble
+          // showOnMount
+          // disableOutsideClick
+          isOpen={open}
+          onClose={onClose}
+          arrow={{
+            color: 'rgba(0,0,0,0.5)',
+            size: 5,
+            // distance: 5,
+          }}
+          content={
+            <div
+              style={{
+                width: '300px',
+                height: '200px',
+                background: 'rgba(0,0,0,0.5)',
+              }}
+            >
+              <button onClick={onClose}>close</button>
+            </div>
+          }
+        >
+          <button onClick={() => setOpen((previous) => !previous)}>{'Controlled'}</button>
+        </Popper>
         {
           positionList.map((position, index) => (
             <div className="inner" key={index}>

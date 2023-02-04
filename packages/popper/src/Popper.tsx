@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, cloneElement } from 'react';
-import { useWindowEvent } from '@no-ui/hooks';
+import { useWindowEvent, usePropAsState } from '@no-ui/hooks';
 import { Portal } from '@no-ui/portal';
 
 import Positioner from './Positioner';
@@ -34,6 +34,8 @@ export interface PopperProps {
   disableOutsideClick?: boolean;
   arrow?: ArrowShape;
   disabled?: boolean;
+  isOpen?: boolean;
+  onClose?: () => void;
   children: JSX.Element | ((show?: boolean) => JSX.Element);
 }
 
@@ -46,16 +48,34 @@ export function Popper({
   disableOutsideClick = false,
   disabled = false,
   arrow = undefined,
+  isOpen = undefined,
+  onClose = undefined,
   children,
 }: PopperProps) {
+  if (
+    (isOpen !== undefined && onClose === undefined) ||
+    (isOpen === undefined && onClose !== undefined)
+  ) {
+    throw new Error('"isOpen", "onClose" props must be provided together');
+  }
+
   const popoverRef = useRef<HTMLElement>(null);
   const positionerRef = useRef<HTMLDivElement>(null);
+  const controlledIsOpen = usePropAsState(isOpen);
   const [show, setShow] = useState(!!showOnMount);
 
   const resolvedChildren = typeof children === 'function' ? children(show) : children;
 
-  const onClose = useCallback(() => setShow(false), []);
-  const onToggle = () => setShow((show) => !show);
+  const hidePopper = useCallback(() => {
+    if (controlledIsOpen === undefined) {
+      // uncontrolled 상태라면 로컬 상태로 업데이트
+      setShow(false);
+    } else {
+      // controlled 상태라면 onClose 함수 호출.
+      onClose?.();
+    }
+  }, [controlledIsOpen, onClose]);
+  const onToggle = () => setShow((previous) => !previous);
   const onClickChild = () => {
     resolvedChildren.props.onClick?.();
 
@@ -63,12 +83,18 @@ export function Popper({
       return;
     }
 
+    // controlled 상태로 사용중이라면 로컬 상태를 건들지 않는다.
+    if (controlledIsOpen !== undefined) {
+      return;
+    }
+
     onToggle();
   };
 
+  const localShow = controlledIsOpen === undefined ? !!show : !!controlledIsOpen;
   // Close popper on scroll and resize
-  useWindowEvent({ type: 'scroll', callback: onClose, disabled: !show });
-  useWindowEvent({ type: 'resize', callback: onClose, disabled: !show });
+  useWindowEvent({ type: 'scroll', callback: hidePopper, disabled: !localShow });
+  useWindowEvent({ type: 'resize', callback: hidePopper, disabled: !localShow });
 
   return (
     <>
@@ -79,7 +105,7 @@ export function Popper({
         }) //
       }
       {
-        show && (
+        localShow && (
           <Portal>
             <Positioner
               ref={positionerRef}
@@ -88,7 +114,7 @@ export function Popper({
               margin={margin}
               bubble={bubble}
               disableOutsideClick={disableOutsideClick}
-              onClose={onClose}
+              onClose={hidePopper}
               Arrow={arrow && <Arrow position={position} arrow={arrow} />}
             >
               {content}
