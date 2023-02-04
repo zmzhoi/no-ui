@@ -82,11 +82,11 @@ export function CloseButton({
     >
       {
         size === 'lg' ? (
-          <Large fill={color} />
+          <Large fill={color} style={{ verticalAlign: 'middle' }} />
         ) : size === 'md' ? (
-          <Medium fill={color} />
+          <Medium fill={color} style={{ verticalAlign: 'middle' }} />
         ) : (
-          <Small fill={color} />
+          <Small fill={color} style={{ verticalAlign: 'baseline' }} />
         ) //
       }
     </button>
