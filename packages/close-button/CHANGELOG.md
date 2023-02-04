@@ -1,5 +1,13 @@
 # @no-ui/close-button
 
+## 0.2.1
+
+### Patch Changes
+
+- a47667c: Fix.
+
+  - fix vertical-align style.
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,5 +1,19 @@
 # @no-ui/popper
 
+## 0.3.0
+
+### Minor Changes
+
+- d406618: Feat.
+
+  - Controlled Popper 지원.
+  - 그에 따라 isOpen, onClose Prop 추가
+
+### Patch Changes
+
+- Updated dependencies [28f7183]
+  - @no-ui/hooks@0.3.0
+
 ## 0.2.2
 
 ### Patch Changes

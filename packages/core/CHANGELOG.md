@@ -1,5 +1,16 @@
 # @no-ui/core
 
+## 0.1.13
+
+### Patch Changes
+
+- Updated dependencies [d406618]
+- Updated dependencies [28f7183]
+- Updated dependencies [a47667c]
+  - @no-ui/popper@0.3.0
+  - @no-ui/hooks@0.3.0
+  - @no-ui/close-button@0.2.1
+
 ## 0.1.12
 
 ### Patch Changes

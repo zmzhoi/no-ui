@@ -1,5 +1,13 @@
 # @no-ui/hooks
 
+## 0.3.0
+
+### Minor Changes
+
+- 28f7183: Feat.
+
+  - usePropAsState hook 추가 (prop을 local state로 동기화해주는 hook)
+
 ## 0.2.1
 
 ### Patch Changes
