@@ -5,6 +5,7 @@ const eslint = require('@rollup/plugin-eslint');
 const { babel } = require('@rollup/plugin-babel');
 const commonjs = require('@rollup/plugin-commonjs');
 const replace = require('@rollup/plugin-replace');
+const typescript = require('rollup-plugin-typescript2');
 
 const pkg = require('./package.json');
 
@@ -26,6 +27,10 @@ const config = {
     },
   ],
   plugins: [
+    process.env.BUILD_ENV === 'development' &&
+      typescript({
+        useTsconfigDeclarationDir: true,
+      }),
     eslint({
       throwOnError: true,
       throwOnWarning: true,
@@ -43,7 +48,7 @@ const config = {
       preventAssignment: true,
     }),
     peerDepsExternal(),
-  ],
+  ].filter(Boolean),
 };
 
 module.exports = config;
